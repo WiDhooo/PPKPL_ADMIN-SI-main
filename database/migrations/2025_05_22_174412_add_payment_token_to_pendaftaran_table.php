@@ -8,14 +8,14 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::table('pendaftaran', function (Blueprint $table) {
+        Schema::table('tblpendaftaran', function (Blueprint $table) {
             $table->string('payment_token')->nullable()->unique()->after('order_id');
         });
     }
 
     public function down()
     {
-        Schema::table('pendaftaran', function (Blueprint $table) {
+        Schema::table('tblpendaftaran', function (Blueprint $table) {
             $table->dropColumn('payment_token');
         });
     }
